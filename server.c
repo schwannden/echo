@@ -1,8 +1,7 @@
-#include "../nplib/np_header.h"
-#include "../nplib/np_lib.h"
+#include "../libsnp/np_header.h"
+#include "../libsnp/np_lib.h"
 
 #define BACKLOG 1
-#define SERV_PORT 9877
 
 void sig_child_handler( int sig );
 

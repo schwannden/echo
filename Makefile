@@ -1,16 +1,18 @@
+CFLAGS= -L../libsnp -Wl,-rpath=../libsnp
+
 all: client server
 
-client: client.o ../nplib/np_lib.o ../nplib/error_functions.o
-	gcc -o client client.o  ../nplib/np_lib.o ../nplib/error_functions.o
+client: client.o
+	gcc -o client client.o ${CFLAGS} -lsnp
 
 client.o: client.c
 	gcc -c client.c
 
-server: server.o ../nplib/np_lib.o ../nplib/error_functions.o
-	gcc -o server server.o  ../nplib/np_lib.o ../nplib/error_functions.o
+server: server.o
+	gcc -o server server.o ${CFLAGS} -lsnp
 
 server.o: server.c
 	gcc -c server.c
 
 clean:
-	rm *.log *.o
+	rm -rf *.log *.o

@@ -1,7 +1,6 @@
-#include "../nplib/np_header.h"
-#include "../nplib/np_lib.h"
+#include "../libsnp/np_header.h"
+#include "../libsnp/np_lib.h"
 
-#define SERV_PORT 9877
 #define max(x, y) ((x>y)? (x) : (y))
 #define min(x, y) ((x>y)? (y) : (x))
 
